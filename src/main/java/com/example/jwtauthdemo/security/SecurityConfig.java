@@ -55,9 +55,9 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                 )
                 // NEW: non-deprecated syntax for H2 console frame options
-                .headers(headers -> headers
-                        .frameOptions(frame -> frame.disable())
-                )
+//                .headers(headers -> headers
+//                        .frameOptions(frame -> frame.disable())
+//                )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
